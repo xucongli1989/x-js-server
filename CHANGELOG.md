@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/xucongli1989/x-js-server/compare/v1.3.0...v1.3.1) (2022-05-23)
+
+
+### Bug Fixes
+
+* revert code ([004f8ff](https://github.com/xucongli1989/x-js-server/commit/004f8ffccedd6401b2898b0c17e32e6d73d4d3f7))
+
 ## [1.3.0](https://github.com/xucongli1989/x-js-server/compare/v1.2.0...v1.3.0) (2022-05-23)
 
 
