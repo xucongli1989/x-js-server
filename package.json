@@ -1,0 +1,84 @@
+{
+  "name": "x-js-server",
+  "version": "1.0.0",
+  "description": "This is a common JavaScript tool library for Node.js.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "check": "x-code-inspect --check-dir src",
+    "build_ts": "tsc --emitDeclarationOnly && babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly --declarationDir lib",
+    "copy": "cpy --cwd=dist index.d.ts ./ --rename=index.polyfill.d.ts && cpy --cwd=dist index.d.ts.map ./ --rename=index.polyfill.d.ts.map",
+    "dev": "npm run check && webpack  --mode=development --progress",
+    "dist": "npm run check && webpack  --mode=production --progress && npm run build_ts && npm run copy && npm run test",
+    "test": "jest --coverage --logHeapUsage",
+    "start": "webpack-dev-server",
+    "release": "standard-version && git push && git push --tags",
+    "ct": "git add -A && git-cz -a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xucongli1989/x-js-server.git"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": [
+    "javascript",
+    "toolkit",
+    "js",
+    "helper",
+    "library"
+  ],
+  "author": "XCL",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/xucongli1989/x-js-server/issues"
+  },
+  "homepage": "https://github.com/xucongli1989/x-js-server#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.8.2",
+    "@typescript-eslint/parser": "4.8.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.14.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-typescript": "12.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "prettier": "2.2.0",
+    "typescript": "4.1.2",
+    "x-package-version-strict-check": "1.7.0",
+    "@babel/cli": "7.12.8",
+    "@babel/core": "7.12.9",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@babel/plugin-transform-async-to-generator": "7.12.1",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-typescript": "7.12.7",
+    "@types/jest": "26.0.15",
+    "@types/node": "13.9.5",
+    "babel-loader": "8.2.2",
+    "clean-webpack-plugin": "3.0.0",
+    "commitizen": "4.2.2",
+    "cpy-cli": "3.1.1",
+    "jest": "26.6.3",
+    "standard-version": "9.0.0",
+    "ts-jest": "26.4.4",
+    "webpack": "5.8.0",
+    "webpack-cli": "4.2.0",
+    "webpack-dev-server": "3.11.0",
+    "x-code-inspect": "1.4.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.12.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
