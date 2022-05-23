@@ -1,1 +1,3 @@
-export const test = ""
+import * as encode from "./encode"
+
+export default { encode }
