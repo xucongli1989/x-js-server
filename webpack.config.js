@@ -17,6 +17,7 @@ const config = {
     resolve: {
         extensions: ['.ts', '.js']
     },
+    target: "node",
     devtool: "source-map",
     module: {
         rules: [
