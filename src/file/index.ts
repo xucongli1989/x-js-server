@@ -84,23 +84,3 @@ export async function getFilePathListInFolder(p: string, isRecursion: boolean = 
 export async function getFolderPathListInFolder(p: string, isRecursion: boolean = true): Promise<string[]> {
     return (await rra.list(p, { stats: false, ignoreFolders: false, recursive: isRecursion })).filter((k: any) => k.isDirectory === true).map((k: any) => k.fullname) || []
 }
-
-/**
- * 判断一个路径是否为系统回收站的路径
- */
-export function isSystemRecyclePath(p: string) {
-    if (!p) {
-        return false
-    }
-    return p.toUpperCase().includes("$RECYCLE.BIN")
-}
-
-/**
- * 判断一个路径是否为 Office 临时文件的路径（文件名以 ~$ 开头）
- */
-export function isOfficeTempPath(p: string) {
-    if (!p) {
-        return false
-    }
-    return path.basename(p).startsWith("~$")
-}
