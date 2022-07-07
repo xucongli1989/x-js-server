@@ -26,4 +26,12 @@ export declare function getFilePathListInFolder(p: string, isRecursion?: boolean
  * 获取指定文件夹路径下的所有文件夹路径
  */
 export declare function getFolderPathListInFolder(p: string, isRecursion?: boolean): Promise<string[]>;
+/**
+ * 判断一个路径是否为系统回收站的路径
+ */
+export declare function isSystemRecyclePath(p: string): boolean;
+/**
+ * 判断一个路径是否为 Office 临时文件的路径（文件名以 ~$ 开头）
+ */
+export declare function isOfficeTempPath(p: string): boolean;
 //# sourceMappingURL=index.d.ts.map
