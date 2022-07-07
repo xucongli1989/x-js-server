@@ -1,6 +1,6 @@
 {
   "name": "x-js-server",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "This is a common JavaScript tool library for Node.js.",
   "main": "./dist/index.js",
   "scripts": {
