@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/xucongli1989/x-js-server/compare/v1.5.0...v1.6.0) (2024-01-11)
+
+
+### Features
+
+* add os-name ([3a69ad2](https://github.com/xucongli1989/x-js-server/commit/3a69ad2de60a61b29011ec361c19b598e8332bc4))
+
 ## [1.5.0](https://github.com/xucongli1989/x-js-server/compare/v1.4.0...v1.5.0) (2022-07-07)
 
 
