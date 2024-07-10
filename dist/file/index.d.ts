@@ -7,9 +7,35 @@ export declare function isFilePath(p: string): Promise<boolean>;
  */
 export declare function isFolderPath(p: string): Promise<boolean>;
 /**
- * 获取扩展名（小写不带点）
+ * 获取文件名（包含扩展名），如：test.mp4
+ */
+export declare function getFileName(p: string): string;
+/**
+ * 获取文件名（不包含扩展名），如：test
+ */
+export declare function getFileNameWithoutExt(p: string): string;
+/**
+ * 获取扩展名（不带点）
  */
 export declare function getExtName(p: string): string;
+/**
+ * 获取文件所在的文件夹路径
+ */
+export declare function getFileDirPath(p: string): string;
+/**
+ * 生成一个文件名
+ * @param fileNameWithoutExt 该文件的文件名（不包含扩展名）
+ * @param extWithoutDot 该文件的扩展名（不包含点）
+ * @returns
+ */
+export declare function createFileName(fileNameWithoutExt: string, extWithoutDot: string): string;
+/**
+ * 生成一个文件名路径
+ * @param dirPath 该文件所在的文件夹路径
+ * @param fileNameWithoutExt 该文件的文件名（不包含扩展名）
+ * @param extWithoutDot 该文件的扩展名（不包含点）
+ */
+export declare function createFilePath(dirPath: string, fileNameWithoutExt: string, extWithoutDot: string): string;
 /**
  * 返回标准的路径
  */
