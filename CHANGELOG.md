@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/xucongli1989/x-js-server/compare/v1.7.0...v1.8.0) (2024-07-10)
+
+
+### Features
+
+* add getUniqueFilePath ([44abe62](https://github.com/xucongli1989/x-js-server/commit/44abe62cb7e10eb2b250f64eb60923877f1e0531))
+
 ## [1.7.0](https://github.com/xucongli1989/x-js-server/compare/v1.6.1...v1.7.0) (2024-07-10)
 
 
