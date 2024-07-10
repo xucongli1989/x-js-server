@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/xucongli1989/x-js-server/compare/v1.6.1...v1.7.0) (2024-07-10)
+
+
+### Features
+
+* update file path process ([212fec5](https://github.com/xucongli1989/x-js-server/commit/212fec5f1f63d08f19692b28b1a8170b0ca3ed78))
+
 ### [1.6.1](https://github.com/xucongli1989/x-js-server/compare/v1.6.0...v1.6.1) (2024-01-11)
 
 ## [1.6.0](https://github.com/xucongli1989/x-js-server/compare/v1.5.0...v1.6.0) (2024-01-11)
