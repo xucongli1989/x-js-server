@@ -52,4 +52,9 @@ export declare function getFilePathListInFolder(p: string, isRecursion?: boolean
  * 获取指定文件夹路径下的所有文件夹路径
  */
 export declare function getFolderPathListInFolder(p: string, isRecursion?: boolean): Promise<string[]>;
+/**
+ * 根据文件路径获取在同一位置唯一的文件路径。如果该路径在磁盘中已经存在，则自动在文件名的末尾追加序号，以保证该文件路径唯一。
+ * 如：D:\test\a.jpg、D:\test\a(1).jpg、D:\test\a(2).jpg
+ */
+export declare function getUniqueFilePath(p: string): string;
 //# sourceMappingURL=index.d.ts.map

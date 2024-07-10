@@ -138,3 +138,23 @@ export async function getFilePathListInFolder(p: string, isRecursion: boolean = 
 export async function getFolderPathListInFolder(p: string, isRecursion: boolean = true): Promise<string[]> {
     return (await rra.list(p, { stats: false, ignoreFolders: false, recursive: isRecursion })).filter((k: any) => k.isDirectory === true).map((k: any) => k.fullname) || []
 }
+
+/**
+ * 根据文件路径获取在同一位置唯一的文件路径。如果该路径在磁盘中已经存在，则自动在文件名的末尾追加序号，以保证该文件路径唯一。
+ * 如：D:\test\a.jpg、D:\test\a(1).jpg、D:\test\a(2).jpg
+ */
+export function getUniqueFilePath(p: string) {
+    if (!fs.existsSync(p)) {
+        return p
+    }
+    const dirPath = getFileDirPath(p)
+    const fileNameWithoutExt = getFileNameWithoutExt(p)
+    const ext = getExtName(p)
+    let uniquePath = p
+    let counter = 1
+    while (fs.existsSync(uniquePath)) {
+        uniquePath = createFilePath(dirPath, `${fileNameWithoutExt}(${counter})`, ext)
+        counter++
+    }
+    return uniquePath
+}
